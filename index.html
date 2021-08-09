@@ -3,7 +3,7 @@
             let lat = position.coords.latitude;
             let lon = position.coords.longitude;
             document.getElementById("location").innerText = `lat: ${lat} | lon: ${lon}`;
-            document.getElementById("locationOnMap").innerText = `You can see your location on google maps https://www.google.com/maps/@${lat},${lon},19.50z`;
+            document.getElementById("locationOnMap").innerHTML = `You can see your location on google maps: `<a href="https://www.google.com/maps/@${lat},${lon},19.50z">;
         });
 </script>
 <div id="location"></div>
