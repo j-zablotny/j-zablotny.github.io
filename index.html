@@ -1,11 +1,10 @@
 <script>
-        let weatherAPI = '';
         navigator.geolocation.getCurrentPosition((position) => {
             let lat = position.coords.latitude;
             let lon = position.coords.longitude;
-            weatherAPI = `api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${lon}&appid=839b4a2f495f6f9dcb24e87ed551666b`;
-            console.log(`https://www.google.com/maps/@${lat},${lon},19.50z`);
             document.getElementById("location").innerText = `lat: ${lat} | lon: ${lon}`;
+            document.getElementById("locationOnMap").innerText = `You can see your location on google maps https://www.google.com/maps/@${lat},${lon},19.50z`;
         });
 </script>
 <div id="location"></div>
+<div id="locationOnMap"/>
