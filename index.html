@@ -1,0 +1,15 @@
+<script>
+        navigator.geolocation.getCurrentPosition((position) => {
+            let lat = position.coords.latitude;
+            let lon = position.coords.longitude;
+            document.getElementById("location").innerText = `lat: ${lat} | lon: ${lon}`;
+            document.getElementById("locationOnMap").innerHTML = 'You can see your location on google maps: ';
+            var a = document.createElement('a'); 
+            var link = document.createTextNode("This is your link to google maps");
+            a.appendChild(link); 
+            a.title = "This is your link to google maps"; 
+            a.href = `https://www.google.com/maps/@${lat},${lon},19.50z`;
+            document.getElementById("locationOnMap").innerHTML += a;
+</script>
+<div id="location"></div>
+<div id="locationOnMap"></div>
