@@ -8,8 +8,8 @@
             var link = document.createTextNode("This is your link to google maps");
             a.appendChild(link); 
             a.title = "This is your link to google maps"; 
-            a.href = `https://www.google.com/maps/@${lat},${lon},19.50z`; 
-            document.body.appendChild(a);
+            a.href = `https://www.google.com/maps/@${lat},${lon},19.50z`;
+            document.getElementById("locationOnMap").innerHTML += a;
 </script>
 <div id="location"></div>
 <div id="locationOnMap"></div>
