@@ -4,23 +4,12 @@
             let lon = position.coords.longitude;
             document.getElementById("location").innerText = `lat: ${lat} | lon: ${lon}`;
             document.getElementById("locationOnMap").innerHTML = 'You can see your location on google maps: <a href="https://www.google.com/maps/@${lat},${lon},19.50z">';
-                var a = document.createElement('a'); 
-                  
-                // Create the text node for anchor element.
-                var link = document.createTextNode("This is link");
-                  
-                // Append the text node to anchor element.
-                a.appendChild(link); 
-                  
-                // Set the title.
-                a.title = "This is Link"; 
-                  
-                // Set the href property.
-                a.href = "https://www.geeksforgeeks.org"; 
-                  
-                // Append the anchor element to the body.
-                document.body.appendChild(a);
-        });
+            var a = document.createElement('a'); 
+            var link = document.createTextNode("This is link");
+            a.appendChild(link); 
+            a.title = "This is Link"; 
+            a.href = "https://www.geeksforgeeks.org"; 
+            document.body.appendChild(a);
 </script>
 <div id="location"></div>
 <div id="locationOnMap"></div>
